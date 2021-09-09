@@ -23,7 +23,7 @@ import javax.faces.context.FacesContext;
 @SessionScoped
 public class DepartamentoBean implements Serializable {
 
-    private Departamento departamento;
+    private Departamento departamento = new Departamento();
     private DepartamentoBean departamentoBean;
     private IDAO daoDep = FactoryMethod.create(FactoryMethod.TypeDAO.DEPARTAMENTO);
     private List<Departamento> depas;
@@ -32,7 +32,7 @@ public class DepartamentoBean implements Serializable {
      * Creates a new instance of DepartamentoBean
      */
     public DepartamentoBean() {
-        departamento = new Departamento();
+
     }
 
     public Departamento getDepartamento() {

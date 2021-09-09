@@ -5,11 +5,13 @@
  */
 package com.mycompany.primefaces.entity;
 
+import java.io.Serializable;
+
 /**
  *
  * @author gaddiel
  */
-public class Empleado {
+public class Empleado implements Serializable{
 
     private String clave;
     private String nombre;

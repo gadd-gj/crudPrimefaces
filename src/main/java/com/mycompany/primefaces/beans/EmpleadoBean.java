@@ -23,7 +23,7 @@ import javax.faces.context.FacesContext;
 @SessionScoped
 public class EmpleadoBean implements Serializable {
 
-    private Empleado empleado;
+    private Empleado empleado = new Empleado();
     private EmpleadoBean empleadoBean;
     private IDAO daoEmp = FactoryMethod.create(FactoryMethod.TypeDAO.EMPLEADO);
     private List<Empleado> emps;
@@ -32,7 +32,7 @@ public class EmpleadoBean implements Serializable {
      * Creates a new instance of EmpleadoBean
      */
     public EmpleadoBean() {
-        empleado = new Empleado();
+
     }
 
     public Empleado getEmpleado() {
