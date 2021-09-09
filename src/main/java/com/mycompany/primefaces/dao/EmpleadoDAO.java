@@ -9,6 +9,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -102,8 +103,8 @@ public class EmpleadoDAO implements IDAO<Empleado> {
     }
 
     @Override
-    public ArrayList showAll() {
-        ArrayList<Empleado> list = new ArrayList<Empleado>();
+    public List showAll() {
+        List<Empleado> list = new ArrayList<Empleado>();
 
         Statement stm = null;
 

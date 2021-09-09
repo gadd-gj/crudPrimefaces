@@ -9,20 +9,39 @@
         <title>Facelet Title</title>
     </h:head>
     <h:body>
-        <h:form>
-            <p:growl id="growl" showDetail="true" />
-            <br/>
-            <span class="ui-float-label">
-                <p:inputText id="float-id" value="#{departamentoBean.departamento.clave}"/>
-                <p:outputLabel for="@previous" value="Id"/>
-            </span>
-            <br/>
-            <span class="ui-float-label">
-                <p:inputText id="float-name" value="#{departamentoBean.departamento.nombre}"/>
-                <p:outputLabel for="@previous" value="Nombre"/>
-            </span>
-            <br/>
-            <p:commandButton update="growl" value="Guardar" actionListener="#{departamentoBean.guardar()}"/>
-        </h:form>
+        <div id="formulario">
+            <h:form>
+                <p:growl id="growl" showDetail="true" />
+                <br/>
+                <span class="ui-float-label">
+                    <p:inputText id="float-id" value="#{departamentoBean.departamento.clave}"/>
+                    <p:outputLabel for="@previous" value="Id"/>
+                </span>
+                <br/>
+                <span class="ui-float-label">
+                    <p:inputText id="float-name" value="#{departamentoBean.departamento.nombre}"/>
+                    <p:outputLabel for="@previous" value="Nombre"/>
+                </span>
+                <br/>
+                <p:commandButton update="growl" value="Guardar" actionListener="#{departamentoBean.guardar()}"/>
+            </h:form>
+        </div>
+
+        <div id="tabla">
+            <h:form>
+                <div class="card">
+                    <p:dataTable var="departamento" value="#{departamentoBean.depas}">
+                        <p:column headerText="Clave">
+                            <h:outputText value="#{departamento.clave}" />
+                        </p:column>
+
+                        <p:column headerText="Nombre">
+                            <h:outputText value="#{departamento.nombre}" />
+                        </p:column>
+                    </p:dataTable>
+                </div>
+            </h:form>
+        </div>
+
     </h:body>
 </html>

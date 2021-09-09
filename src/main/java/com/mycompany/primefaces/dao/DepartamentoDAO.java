@@ -13,6 +13,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -97,8 +98,8 @@ public class DepartamentoDAO implements IDAO<Departamento> {
     }
 
     @Override
-    public ArrayList showAll() {
-        ArrayList<Departamento> list = new ArrayList<Departamento>();
+    public List showAll() {
+        List<Departamento> list = new ArrayList<Departamento>();
 
         PreparedStatement pst = null;
         try {

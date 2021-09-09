@@ -5,7 +5,7 @@
  */
 package com.mycompany.primefaces.inter;
 
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -19,7 +19,7 @@ public interface IDAO<T> {
 
     public T searchById(String id);
 
-    public ArrayList showAll();
+    public List showAll();
 
     public boolean delete(String id);
 

@@ -11,6 +11,8 @@ import com.mycompany.primefaces.inter.IDAO;
 import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 
@@ -24,12 +26,15 @@ public class DepartamentoBean implements Serializable {
 
     private Departamento departamento;
     private DepartamentoBean departamentoBean;
+    private IDAO daoDep = FactoryMethod.create(FactoryMethod.TypeDAO.DEPARTAMENTO);
+    private List<Departamento> depas;
 
     /**
      * Creates a new instance of DepartamentoBean
      */
     public DepartamentoBean() {
         departamento = new Departamento();
+        depas = daoDep.showAll();
     }
 
     public Departamento getDepartamento() {
@@ -48,14 +53,23 @@ public class DepartamentoBean implements Serializable {
         this.departamentoBean = departamentoBean;
     }
 
-    public void guardar() {
-        IDAO daoDep = FactoryMethod.create(FactoryMethod.TypeDAO.DEPARTAMENTO);
+    public List<Departamento> getDepas() {
+        return depas;
+    }
 
+    public void setDepas(List<Departamento> depas) {
+        this.depas = depas;
+    }
+
+    public void guardar() {
         boolean res = daoDep.insert(getDepartamento());
         if (res) {
             addMessage(FacesMessage.SEVERITY_INFO, "Guardado", "El departamento se ha guardado exitosamente");
         }
+    }
 
+    public List mostrar() {
+        return depas;
     }
 
     public void addMessage(FacesMessage.Severity severity, String summary, String detail) {
