@@ -7,7 +7,6 @@ package com.mycompany.primefaces.beans;
 
 import com.mycompany.primefaces.entity.Empleado;
 import com.mycompany.primefaces.factory.FactoryMethod;
-import com.mycompany.primefaces.factory.FactoryMethod.TypeDAO;
 import com.mycompany.primefaces.inter.IDAO;
 import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
@@ -26,7 +25,7 @@ public class EmpleadoBean implements Serializable {
 
     private Empleado empleado;
     private EmpleadoBean empleadoBean;
-    private IDAO daoEmp = FactoryMethod.create(TypeDAO.EMPLEADO);
+    private IDAO daoEmp = FactoryMethod.create(FactoryMethod.TypeDAO.EMPLEADO);
     private List<Empleado> emps;
 
     /**

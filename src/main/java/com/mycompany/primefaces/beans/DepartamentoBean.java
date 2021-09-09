@@ -33,7 +33,6 @@ public class DepartamentoBean implements Serializable {
      */
     public DepartamentoBean() {
         departamento = new Departamento();
-        depas = daoDep.showAll();
     }
 
     public Departamento getDepartamento() {
@@ -53,7 +52,7 @@ public class DepartamentoBean implements Serializable {
     }
 
     public List<Departamento> getDepas() {
-        return depas;
+        return depas = daoDep.showAll();
     }
 
     public void setDepas(List<Departamento> depas) {
