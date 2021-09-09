@@ -5,4 +5,5 @@
 /home/gaddiel/NetBeansProjects/primefaces/src/main/java/com/mycompany/primefaces/entity/Empleado.java
 /home/gaddiel/NetBeansProjects/primefaces/src/main/java/com/mycompany/primefaces/dao/EmpleadoDAO.java
 /home/gaddiel/NetBeansProjects/primefaces/src/main/java/com/mycompany/primefaces/entity/Departamento.java
+/home/gaddiel/NetBeansProjects/primefaces/src/main/java/com/mycompany/primefaces/factory/FactoryMethod.java
 /home/gaddiel/NetBeansProjects/primefaces/src/main/java/com/mycompany/primefaces/inter/IDAO.java
