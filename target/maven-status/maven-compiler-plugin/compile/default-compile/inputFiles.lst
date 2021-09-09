@@ -1,0 +1,8 @@
+/home/gaddiel/NetBeansProjects/primefaces/src/main/java/com/mycompany/primefaces/beans/DepartamentoBean.java
+/home/gaddiel/NetBeansProjects/primefaces/src/main/java/com/mycompany/primefaces/beans/EmpleadoBean.java
+/home/gaddiel/NetBeansProjects/primefaces/src/main/java/com/mycompany/primefaces/dao/DepartamentoDAO.java
+/home/gaddiel/NetBeansProjects/primefaces/src/main/java/com/mycompany/primefaces/Conexion.java
+/home/gaddiel/NetBeansProjects/primefaces/src/main/java/com/mycompany/primefaces/entity/Empleado.java
+/home/gaddiel/NetBeansProjects/primefaces/src/main/java/com/mycompany/primefaces/dao/EmpleadoDAO.java
+/home/gaddiel/NetBeansProjects/primefaces/src/main/java/com/mycompany/primefaces/entity/Departamento.java
+/home/gaddiel/NetBeansProjects/primefaces/src/main/java/com/mycompany/primefaces/inter/IDAO.java
