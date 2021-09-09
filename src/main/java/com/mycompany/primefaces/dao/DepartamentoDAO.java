@@ -44,7 +44,6 @@ public class DepartamentoDAO implements IDAO<Departamento> {
         } catch (SQLException ex) {
             Logger.getLogger(DepartamentoDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
-
         return centinela;
     }
 

@@ -11,7 +11,6 @@ import com.mycompany.primefaces.inter.IDAO;
 import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
@@ -65,11 +64,33 @@ public class DepartamentoBean implements Serializable {
         boolean res = daoDep.insert(getDepartamento());
         if (res) {
             addMessage(FacesMessage.SEVERITY_INFO, "Guardado", "El departamento se ha guardado exitosamente");
+        } else {
+            addMessage(FacesMessage.SEVERITY_ERROR, "Error", "El departamento no se ha podido guardar exitosamente");
+        }
+    }
+
+    public void eliminar() {
+        if (daoDep.delete(getDepartamento().getClave())) {
+            addMessage(FacesMessage.SEVERITY_INFO, "Eliminado", "El departamento se ha eliminado exitosamente");
+        } else {
+            addMessage(FacesMessage.SEVERITY_ERROR, "Error", "El departamento no se ha podido eliminar");
         }
     }
 
     public List mostrar() {
         return depas;
+    }
+
+    public Departamento buscar() {
+        return departamento = (Departamento) daoDep.searchById(departamento.getClave());
+    }
+
+    public void actualizar() {
+        if (daoDep.update(getDepartamento())) {
+            addMessage(FacesMessage.SEVERITY_INFO, "Actualizado", "El departamento se ha actualizado exitosamente");
+        } else {
+            addMessage(FacesMessage.SEVERITY_ERROR, "Error", "El departamento no se ha encontrado");
+        }
     }
 
     public void addMessage(FacesMessage.Severity severity, String summary, String detail) {

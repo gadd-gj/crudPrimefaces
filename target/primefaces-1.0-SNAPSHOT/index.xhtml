@@ -7,8 +7,19 @@
       >
     <h:head>
         <title>Facelet Title</title>
+         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </h:head>
     <h:body>
+
+        <div>
+            <p:linkButton outcome="empleados" value="Empleados" style="margin-right:20px;">
+            </p:linkButton> 
+        </div>
+
+        <div>
+            <h3>Departamentos </h3>
+        </div>
+
         <div id="formulario">
             <h:form>
                 <p:growl id="growl" showDetail="true" />
@@ -23,7 +34,13 @@
                     <p:outputLabel for="@previous" value="Nombre"/>
                 </span>
                 <br/>
-                <p:commandButton update="growl" value="Guardar" actionListener="#{departamentoBean.guardar()}"/>
+
+                <div>
+                    <p:commandButton update="growl" value="Guardar" actionListener="#{departamentoBean.guardar()}"/>
+                    <p:commandButton update="growl" value="Eliminar" actionListener="#{departamentoBean.eliminar()}"/>
+                    <p:commandButton update="growl" value="Actualizar" actionListener="#{departamentoBean.actualizar()}"/>
+                </div>
+
             </h:form>
         </div>
 
